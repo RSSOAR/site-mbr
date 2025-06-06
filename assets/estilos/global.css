@@ -4,14 +4,18 @@
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
+    a{
+      text-decoration: none;
+      list-style: none;
+    }
     html {
        scroll-behavior: smooth;
      }
-    body {
+    /*body {
       background: #f7f7f7;
-      /*scroll-behavior: smooth;*/
-      background-color: white;
-    }
+      scroll-behavior: smooth;
+      background-color: white; 
+    } */
     
     h1 {
       font-size: 2.1rem;
@@ -57,3 +61,31 @@
       color: #00b300;
       font-weight: bold;
     }
+    main {
+      width: 97vw;
+      margin: 0 auto;
+      margin-top: 126px;
+    /*  background-color: white; */
+      overflow: hidden;
+
+    }
+
+    .background-container {
+    position: relative; /* Importante para o pseudoelemento */
+   /*background-color: #fff;  Defina uma cor de fundo (opcional) */
+}
+
+.background-container::before {
+    content: ""; /* Necessário para o pseudoelemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/01-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.05; /* Define a opacidade */
+    z-index: -1; /*  Faz com que o pseudoelemento fique atrás do conteúdo */
+}
