@@ -67,7 +67,7 @@
       const targetElement = document.getElementById(targetID);
 
       if (targetElement) {
-        const headerOffset = 225; // altura do header fixo
+        const headerOffset = 220; // altura do header fixo
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
