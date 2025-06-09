@@ -38,16 +38,16 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   </head>
-  <body>
+  <body id="topo">
     <header>
       <div class="logo">
         <img src="./assets/img/Logo_MBR.png" alt="Logo da MBR Reciclagem"  />
       </div>
       <nav>
-        <a href="#home">HOME</a>
+        <a href="index.html">HOME</a>
         <a href="#quem_somos">QUEM SOMOS</a>
         <a href="#servico">COLETA DE ÓLEO</a>
-        <a href="contato.html">CONTATO</a>
+        <a href="contato.html" rel="next">CONTATO</a>
         <a href="#noticia">NOTÍCIAS</a>
         <a id="item_coleta" href="https://wa.me/2136543128" target="_blank"">SOLICITAR COLETA</a>
       </nav>
@@ -68,8 +68,8 @@
       <a href="https://wa.me/2136543128" target="_blank" tabindex="-1">Solicitar Coleta</a>
     </div>
 
-    <main class="background-container">
-      <section id="home"  data-aos="fade-up">
+    <main class="background-container" >
+      <section id="home"  >
         <div class="section-content">
           <h1>MBR Reciclagem</h1>
           <h2>Transformando Óleo em Futuro Sustentável</h2>
@@ -82,9 +82,9 @@
         </div>
       </section>
       
-      <section id="quem_somos"  data-aos="fade-up">
+      <section id="quem_somos"  >
             <div  class="section-content_on ">
-              <h2>Quem Somos</h2>
+              <h2 >Quem Somos</h2>
               <p>Localizada na Penha – RJ, a <strong>MBR II COMERCIO DE MATERIAIS RECICLÁVEIS </strong> fundada há 25 anos é a pioneira no mercado, nós temos como princípio, o conceito de sustentabilidade e respeito ao meio ambiente,   
               Prestando serviço especializado na coleta, transporte e destinação final de Óleo Vegetal.</p>
               <p>A <strong> MBR</strong> está equipada e estruturada        adequadamente para o tratamento de óleos e gorduras vegetais e os resíduos gerados pelo processo de reciclagem. O óleo tratado é enviado as indústrias para produção de biodiesel, com isso beneficiamos mais de 5 milhões de litros de óleo vegetal usado.</p>
@@ -120,8 +120,8 @@
             </div>
       </section>
 
-      <section id="servico" class="section-servico" data-aos="fade-up">
-        <div class="section-content_servico">
+      <section  class="section-servico" data-aos="fade-up">
+        <div id="servico" class="section-content_servico">
             <h2>Conheça Nosso Serviço</h2>
             <h3>Coleta de óleos e Gorduras Residuais(OGR) para Empreas, Comércios e Instituições </h3>
             <p>As coletas são feitas em estabelecimentos comerciais como restaurantes, padarias, cozinhas industriais, indústrias alimentícias, residências, além de pontos de coletas distribuídos em supermercados em toda Rio de Janeiro, Espirito Santo e Volta Redonda. Este serviço não tem custo para os estabelecimentos e certifica que o mesmo não está prejudicando o meio ambiente.
@@ -178,9 +178,22 @@
        
       </section>
       
-      <a href="https://wa.me/2136543128" target="_blank" class="whatsapp-button">
-    <img src="./assets/img/btn-whatsapp.png" alt="Fale conosco no WhatsApp" class="whatsapp-icon">
-</a>
+      <section class="whatsapp">
+        <a href="https://wa.me/2136543128" target="_blank" class="whatsapp-button">
+          <img src="./assets/img/btn-whatsapp.png" alt="Fale conosco no WhatsApp" class="whatsapp-icon">
+        </a>
+      </section>
+      <section class="btn-voltar"  >
+        <div  data-scroll="suave" data-anima="scroll">
+          <a href="#topo">
+            <div class="topo">
+              <img src="./assets/img/circle-uo.png" alt="Icone de voltar ao topo da página">
+            </div>
+          </a>
+        </div>
+
+      </section>
+      
     </main>
 
       <footer>
@@ -214,7 +227,6 @@
         </div >
       </footer>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
     <script src="assets/estilos/script.js"></script>
   </body>
 </html>

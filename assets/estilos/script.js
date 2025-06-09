@@ -39,6 +39,38 @@
       });
     });
 
+    // Configuração do btn voltar e scroll suave
+    // botão voltar ao topo qdo chegar no fim da tela  
+const scrollAnima=document.querySelector('[data-anima="scroll"]'); 
+const metadeWindow = window.innerHeight * 5.2
+function animaScroll(){
+const topoItem = scrollAnima.getBoundingClientRect().top
+const itemVisivel = topoItem - metadeWindow < 0
+if(itemVisivel){
+  scrollAnima.classList.add('btn-show')
+} else{
+    scrollAnima.classList.remove('btn-show')
+
+}
+
+}
+animaScroll();
+window.addEventListener('scroll', animaScroll);
+
+// Scroll suave
+const linkInterno = document.querySelector('[data-scroll="suave"] a[href^="#"]')
+function scroll(event){
+  event.preventDefault()
+  const  href = event.currentTarget.getAttribute('href')
+  const topo = document.querySelector(href)
+
+  topo.scrollIntoView({
+    behavior:'smooth',
+    block: 'start'
+  })
+}
+
+linkInterno.addEventListener('click', scroll)
     // Validação simples do formulário
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', (e) => {
@@ -58,7 +90,7 @@
       form.reset();
     });
 
-    // Ajuste da rolagem para header fixo com altura de 140px
+    /*Ajuste da rolagem para header fixo com altura 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
@@ -67,7 +99,7 @@
       const targetElement = document.getElementById(targetID);
 
       if (targetElement) {
-        const headerOffset = 220; // altura do header fixo
+        const headerOffset = 120; // altura do header fixo
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -77,7 +109,7 @@
         });
       }
     });
-  }); 
+  });*/
 
   
 	

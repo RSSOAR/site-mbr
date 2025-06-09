@@ -11,6 +11,10 @@
     html {
        scroll-behavior: smooth;
      }
+     :target {
+      scroll-margin-top: 8em;
+    }
+
     /*body {
       background: #f7f7f7;
       scroll-behavior: smooth;
@@ -64,7 +68,6 @@
     main {
       width: 97vw;
       margin: 0 auto;
-      margin-top: 106px;
     /*  background-color: white; */
       overflow: hidden;
 

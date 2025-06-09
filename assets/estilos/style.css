@@ -7,16 +7,16 @@
       height: 100px;
       /*background: linear-gradient(90deg, #006400, #00b300);*/
       background-color: #006400;
-      opacity: 0.96;
+      opacity: 0.95;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items:end;
       padding: 1rem 2rem 1rem 4rem;
-      position: fixed;
+      /*position: fixed;
       top: 0;
       left: 0;
-      z-index: 1000;
+      z-index: 1000; */
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     .logo > img {
@@ -100,7 +100,7 @@
     }
     
     section#home {
-      margin-bottom: 2rem;
+      margin: 2rem 0;
       display: flex;
       gap: 0.1rem;
       align-items: flex-start;
@@ -108,8 +108,8 @@
     .section-content {
       flex: 2;
     /*  background: white; */
-      padding: 1rem 2rem; 
-      margin-top:20px;
+      padding: 0 2rem; 
+      margin-top:30px;
       border-radius: 10px;
      /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
     }
@@ -261,7 +261,7 @@
             margin: 0 auto;
             height: 0;  
             margin: 35px auto;
-            padding-bottom: 36.25%; /* 16:9 ratio */
+            padding-bottom: 46.25%; /* 16:9 ratio */
             overflow: hidden;
             border-radius: 16px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
@@ -295,7 +295,7 @@
 }
 .whatsapp-icon {
     width: 90px; /* Largura da imagem */
-    height: 90; /* Altura da imagem */
+    height: 90px; /* Altura da imagem */
 }
 @keyframes pulse {
   0% {
@@ -309,20 +309,61 @@
   }
 }
 
+/*botão WhatsApp */
 .whatsapp-button:hover {
   transform: translateY(-7px);
   transition: transform 0.5s ease;
 }
 
+/* Botão voltar ao topo suave */
+.topo{
+  display:none;
+  background-color: #006400;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  left: 25px;
+  border-radius: 50%;
+  transition: .4s all;
+}
+.topo img{
+  height:60px;
+  width: 60px;
+  filter: invert(1);
+}
+.btn-show .topo {
+  display:flex;
+  transition: .4s all;
+}
+
+.contatos{
+  display: flex;
+  margin: 15px auto;
+  justify-content:center;
+  gap:20px;
+}  
+.maps{
+  flex: 1;
+  max-width: 50%;
+  height: 100vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+}
+.maps iframe{
+  width: 100%;
+  height: 100%;
+}
     /* Formulário de contato */
-    section#contato{
-    }
-    form {
+     .section-form_contato {
+      flex: 1;
       background: white;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      max-width: 600px;
+      width: 100%;
+      height: 100vh;
       margin: 0 auto 4rem auto;
     }
     form h2 {
